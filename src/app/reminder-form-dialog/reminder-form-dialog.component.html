@@ -1,0 +1,29 @@
+<div>
+
+  <form [formGroup]="reminderForm">
+      <mat-form-field appearance="fill" style="margin: 10px 10px 10px 10px;">
+          <mat-label>Reminder</mat-label>
+          <input matInput id="type" type="text" formControlName="type">
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+
+      <mat-form-field  appearance="fill" style="margin: 10px 10px 10px 10px;">
+          <mat-label>Description</mat-label>
+          <input matInput id="Description" type="text" formControlName="description">
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+
+      <mat-form-field  appearance="fill" style="margin: 10px 10px 10px 10px;">
+          <mat-label>Date</mat-label>
+          <input matInput id="Date" type="text" formControlName="date">
+      </mat-form-field>
+
+      <div>
+          <button mat-raised-button color="primary" style="margin: 10px 10px 10px 10px;" [disabled]="!reminderForm.valid" type="submit" (click)="onSubmit()"> Save </button>
+          <button mat-raised-button color="warn" (click)="close()"> Cancel </button>
+      </div>
+  </form>
+ 
+</div>
